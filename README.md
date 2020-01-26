@@ -1,3 +1,26 @@
+# install-mf-wmv.sh
+Installer for Windows Media Foundation and Windows Media DLLs for Steam Windows games running under Proton.
+
+## Known working games (including cut scenes):
+
+- Resident Evil 2
+- Resident Evil 7
+- Darksiders Warmastered Edition
+- Devil May Cry 5
+
+Just set WINEPREFIX and the PROTON version you use for that particular game and run the script:
+
+`WINEPREFIX="/home/slaanesh/.local/share/Steam/steamapps/compatdata/462780/pfx" PROTON=4.11 ./install-mf-wmv.sh`
+
+The script will download all necessary files and leave them in the folder where the script is.
+
+`installcab.py` is exactly the same as upstream (https://github.com/tonix64/python-installcab/blob/master/installcab.py)
+
+## Dependencies
+- python2
+- cabextract
+- wine
+
 # python-installcab
 
 Extract and install components from cab based installers
@@ -57,14 +80,7 @@ The software doesn't try to find out dependencies or be smart about where to ins
 
 It does not aim to fully support cabinet installers, but is capable of installing just parts from an installer, going a bit further than what is actually possible with 'proper' support.
 
-## Dependencies
-
-- python
-- cabextract
-- wine
-
 ## License
 
 This software is released into the Public Domain by use of the Unlicense, see the [LICENSE](LICENSE) file
 for more details.
-
