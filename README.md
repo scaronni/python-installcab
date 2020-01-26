@@ -1,5 +1,7 @@
-# install-mf-wmv.sh
-Installer for Windows Media Foundation and Windows Media DLLs for Steam Windows games running under Proton.
+# Windows Media Foundation installer for Proton
+Installer for Windows Media Foundation and Windows Media DLLs/codecs for Proton.
+
+This will make sure that Windows games requiring this will be able to find their necessary components to start and play videos. The Windows Media Foundation core set and all DLLS and codecs required to open Windows Media Videos are installed inside the Wine prefix of your Windows game.
 
 ## Known working games (including cut scenes):
 
@@ -8,9 +10,11 @@ Installer for Windows Media Foundation and Windows Media DLLs for Steam Windows 
 - Darksiders Warmastered Edition
 - Devil May Cry 5
 
-Just set WINEPREFIX and the PROTON version you use for that particular game and run the script:
+Just set WINEPREFIX and the PROTON version you use for that particular game and run the script. For example, to install the components in Darksiders Warmastered Edition running under Proton 4.11:
 
-`WINEPREFIX="/home/slaanesh/.local/share/Steam/steamapps/compatdata/462780/pfx" PROTON=4.11 ./install-mf-wmv.sh`
+```
+WINEPREFIX="~/.local/share/Steam/steamapps/compatdata/462780/pfx" PROTON=4.11 ./install-mf-wmv.sh
+```
 
 The script will download all necessary files and leave them in the folder where the script is.
 
